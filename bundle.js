@@ -7155,14 +7155,12 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
 
     var signer = web3.eth.accounts[0]
     if (!signer) return connect()
-    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP3')
+    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP4')
 
     const domain = [
       { name: "name", type: "string" },
       { name: "version", type: "string" },
-      { name: "chainId", type: "uint256" },
-      { name: "verifyingContract", type: "address" },
-      { name: "salt", type: "bytes32" },
+      { name: "chainId", type: "uint256" }
     ];
     const bid = [
       { name: "amount", type: "uint256" },
