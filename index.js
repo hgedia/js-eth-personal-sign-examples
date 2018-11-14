@@ -199,7 +199,7 @@ signTypedDataButton.addEventListener('click', function(event) {
     {
       type: 'string',
       name: 'Message',
-      value: 'Hi, Alice!'
+      value: 'Hi, Bobbo!'
     },
     {
       type: 'uint32',
