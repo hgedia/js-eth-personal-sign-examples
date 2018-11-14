@@ -7155,7 +7155,7 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
 
     var signer = web3.eth.accounts[0]
     if (!signer) return connect()
-    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP88')
+    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP99')
 
     const domain = [
       { name: "name", type: "string" },
@@ -7171,11 +7171,32 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
       { name: "wallet", type: "address" },
     ];
 
+    const claim = [
+      { name: "claim_id", type: "uint256" },
+      { name: "proof", type: "string" },
+      { name: "deadline", type: "uint256" },
+      { name: "skill" , type :"string"},
+      { name: "indorsed" , type :"boolean"}
+    ]
+
+
     const domainData = {
-      name: "My amazing dApp",
-      version: "2",
+      name: "Indorse.io",
+      version: "1",
       chainId: parseInt(web3.version.network, 10)
     };
+    
+    var message = {
+      claim :{
+        name :"Test User",
+        proof : "www.github.com/my_repo",
+        deadline : 2000,
+        skill : "Javascript",
+        indorsed : true
+      }
+    }
+
+    /*
     var message = {
       amount: 100,
       bidder: {
@@ -7183,15 +7204,17 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
         wallet: "0x3333333333333333333333333333333333333333"
       }
     };
+    */
 
     const data = JSON.stringify({
       types: {
         EIP712Domain: domain,
+        Claim : claim,
         Bid: bid,
         Identity: identity,
       },
       domain: domainData,
-      primaryType: "Bid",
+      primaryType: "Claim",
       message: message
     });
 
