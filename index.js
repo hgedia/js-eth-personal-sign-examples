@@ -346,7 +346,7 @@ ethjsSignTypedDataButton.addEventListener('click', function(event) {
   var from = web3.eth.accounts[0]
   if (!from) return connect()
 
-  console.log('CLICKED, SENDING PERSONAL SIGN REQ')
+  console.log('CLICKED, SENDING ETH JS SIGNED DATA SIGN REQ')
   var params = [msgParams, from]
 
   var eth = new Eth(web3.currentProvider)
