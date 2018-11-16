@@ -7219,7 +7219,7 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
         const s = "0x" + signature.substring(64, 128);
         const v = parseInt(signature.substring(128, 130), 16);
         // The signature is now comprised of r, s, and v.
-        console.log("Signature is " + signature)
+        console.log("Signature is " + result.result)
       }
     );
   })
