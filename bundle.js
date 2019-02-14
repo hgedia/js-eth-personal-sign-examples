@@ -7176,30 +7176,40 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
       { name: "wallet", type: "address" },
     ];
 
+    const vote = [
+      { name: "featureName", type: "string" },
+      { name: "voterId", type: "string" },
+      { name: "featureId", type: "string" },
+      { name: "vote", type: "string" },
+      {name: "version" , type : "string"}
+    ]
+
+
+
 
     const domainData = {
-      name: "My amazing dApp",
-      version: "2",
-      chainId: parseInt(web3.version.network, 10),
-      verifyingContract: "0x1C56346CD2A2Bf3202F771f50d3D14a367B48070",
-      salt: "0xf2d857f4a3edcb9b78b4d503bfe733db1e3f6cdc2b7971ee739626c97e86a558"
+      name: "Indorse",
+      version: "1",
+      chainId: 10,
+      verifyingContract: "0xa4a96d9352ed3cc555f2a58cd8f1f7877ca5f6e4",
+      salt: "0x8267bfd1ad28e9dac18d12e131b4a45f5d9a3c5cbfe69ff8b34b0fb47203e1a9"
     };
+    
     var message = {
-      amount: 100,
-      bidder: {
-        userId: 323,
-        wallet: "0x3333333333333333333333333333333333333333"
-      }
+      featureName: "Hello",
+      voterId : "5abc123",
+      featureId : "8abc123",
+      vote : "UPVOTE",
+      version : "1"
     };
 
     const data = JSON.stringify({
       types: {
         EIP712Domain: domain,
-        Bid: bid,
-        Identity: identity,
+        Vote: vote        
       },
       domain: domainData,
-      primaryType: "Bid",
+      primaryType: "Vote",
       message: message
     });
 
