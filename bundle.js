@@ -7191,7 +7191,7 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
       name: "Indorse",
       version: "1",
       chainId: 4,
-      verifyingContract: "0xe4caff2b1f4f2afd7558cb35fe9eedbbf4e4b3e5",
+      verifyingContract: "0xc0ac726935cba39a1f14869ad9c6c6e8f89f5e38",
       salt: "0x8267bfd1ad28e9dac18d12e131b4a45f5d9a3c5cbfe69ff8b34b0fb47203e1a9"
     };
     
