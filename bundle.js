@@ -7158,7 +7158,7 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
 
     var signer = web3.eth.accounts[0]
     if (!signer) return connect()
-    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP4')
+    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP5')
 
     const domain = [
       { name: "name", type: "string" },
