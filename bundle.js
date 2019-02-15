@@ -7158,7 +7158,7 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
 
     var signer = web3.eth.accounts[0]
     if (!signer) return connect()
-    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP3')
+    console.log('CLICKED, SENDING SignedType Data SIGN REQ UP4')
 
     const domain = [
       { name: "name", type: "string" },
@@ -7178,10 +7178,10 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
 
     const vote = [
       { name: "featureName", type: "string" },
-      { name: "voterId", type: "string" },
-      { name: "featureId", type: "string" },
-      { name: "vote", type: "string" },
-      {name: "version" , type : "string"}
+      //{ name: "voterId", type: "string" },
+      //{ name: "featureId", type: "string" },
+      //{ name: "vote", type: "string" },
+      //{name: "version" , type : "string"}
     ]
 
 
@@ -7191,16 +7191,16 @@ ethjsPersonalSignButton.addEventListener('click', function(event) {
       name: "Indorse",
       version: "1",
       chainId: 4,
-      verifyingContract: "0xa4a96d9352ed3cc555f2a58cd8f1f7877ca5f6e4",
+      verifyingContract: "0xe4caff2b1f4f2afd7558cb35fe9eedbbf4e4b3e5",
       salt: "0x8267bfd1ad28e9dac18d12e131b4a45f5d9a3c5cbfe69ff8b34b0fb47203e1a9"
     };
     
     var message = {
       featureName: "Hello",
-      voterId : "5abc123",
-      featureId : "8abc123",
-      vote : "UPVOTE",
-      version : "1"
+      //voterId : "5abc123",
+      //featureId : "8abc123",
+      //vote : "UPVOTE",
+      //version : "1"
     };
 
     const data = JSON.stringify({
